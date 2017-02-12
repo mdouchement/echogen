@@ -1,0 +1,92 @@
+package web
+
+import (
+	"fmt"
+
+	static "github.com/Code-Hex/echo-static"
+	assetfs "github.com/elazarl/go-bindata-assetfs"
+	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
+	"{{.project_path}}/{{.project_name}}/config"
+	"{{.project_path}}/{{.project_name}}/controllers"
+	"{{.project_path}}/{{.project_name}}/web/middlewares"
+	"gopkg.in/urfave/cli.v2"
+)
+
+var (
+	// Command defines the server command (CLI).
+	Command = &cli.Command{
+		Name:    "server",
+		Aliases: []string{"s"},
+		Usage:   "start server",
+		Action:  action,
+		Flags:   flags,
+	}
+
+	flags = []cli.Flag{
+		&cli.StringFlag{
+			Name:  "p, port",
+			Usage: "Specify the port to listen to.",
+		},
+		&cli.StringFlag{
+			Name:  "b, binding",
+			Usage: "Binds server to the specified IP.",
+		},
+	}
+)
+
+func action(context *cli.Context) error {
+
+	engine := EchoEngine()
+	printRoutes(engine)
+
+	listen := fmt.Sprintf("%s:%s", context.String("b"), context.String("p"))
+	config.Log.Infof("Server listening on %s", listen)
+	engine.Start(listen)
+
+	return nil
+}
+
+// EchoEngine instanciates the LSS server.
+func EchoEngine() *echo.Echo {
+	engine := echo.New()
+	engine.Use(middleware.Recover())
+	engine.Use(middlewares.Echorus(config.Log))
+	// Error handler
+	engine.HTTPErrorHandler = middlewares.HTTPErrorHandler
+	// Views templates
+	engine.Renderer = templates
+	// Strong parameters
+	engine.Validator = &controllers.ParamsValidator{}
+
+	router := engine.Group(config.Cfg.RouterNamespace)
+
+	engine.Use(static.ServeRoot("/public", newAssets("public"))) // assets
+	router.GET("/version", controllers.Version)
+	router.GET("/", controllers.IndexHome)
+	// CRUD defines the folowwing resources:
+	//   POST:   /path
+	//   GET:    /path
+	//   GET:    /path/:id
+	//   PATCH:  /path/:id
+	//   DEL:    /path/:id
+	// middlewares.CRUD(router, "/users", controllers.NewUsers())
+
+	return engine
+}
+
+func newAssets(root string) *assetfs.AssetFS {
+	return &assetfs.AssetFS{
+		Asset:     Asset,
+		AssetDir:  AssetDir,
+		AssetInfo: AssetInfo,
+		Prefix:    root,
+	}
+}
+
+func printRoutes(e *echo.Echo) {
+	fmt.Println("Routes:")
+	for _, route := range e.Routes() {
+		fmt.Printf("%6s %s\n", route.Method, route.Path)
+	}
+}

@@ -1,0 +1,46 @@
+package: {{.project_path}}/{{.project_name}}
+import:
+# Unclassified
+- package: gopkg.in/urfave/cli.v2
+  version: ee2e8aa5b22f55f006c27fd35765c62249a39aad
+- package: github.com/caarlos0/env
+  version: 2.0.0
+- package: gopkg.in/asaskevich/govalidator.v5
+  version: 7b3beb6df3c42abd3509abfc3bcacc0fbfb7c877
+# Web framework
+- package: github.com/labstack/echo
+  version: c7c4395fbdf085a1d76443e2b66dc94aeba7947c # > v3.0.3
+  subpackages:
+  - middleware
+- package: github.com/labstack/gommon
+  version: 9a43ff0d261e0e65594422e9eee08cf301aabbe7
+  subpackages:
+  - bytes
+  - color
+  - log
+  - random
+- package: github.com/Code-Hex/echo-static
+  version: aa7c0382cfa1d59ab72807208c15649625f9fbc9
+- package: github.com/rsc/letsencrypt
+  version: 76104d26167d38b6a0010f42bfc8ec5487742e8b
+- package: github.com/tylerb/graceful
+  version: 50a48b6e73fcc75b45e22c05b79629a67c79e938
+- package: github.com/dgrijalva/jwt-go
+  version: 24c63f56522a87ec5339cc3567883f1039378fdb
+- package: github.com/elazarl/go-bindata-assetfs
+  version: 9a6736ed45b44bf3835afeebb3034b57ed329f3e
+# Logging
+- package: github.com/Sirupsen/logrus
+  version: 0.10.0
+- package: github.com/x-cray/logrus-prefixed-formatter
+  version: 78e945f7d6bfe5a81ce6121d92d8118e44303e58
+- package: github.com/mgutz/ansi
+  version: c286dcecd19ff979eeb73ea444e479b903f2cfcb
+- package: github.com/mattn/go-colorable
+  version: 9056b7a9f2d1f2d96498d6d146acd1f9d5ed3d59
+- package: github.com/mattn/go-isatty
+  version: 56b76bdf51f7708750eac80fa38b952bb9f32639
+- package: golang.org/x/sys
+  version: a646d33e2ee3172a661fc09bca23bb4889a41bc8
+  subpackages:
+  - unix

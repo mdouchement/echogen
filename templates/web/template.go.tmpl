@@ -1,0 +1,67 @@
+package web
+
+import (
+	"bytes"
+	"errors"
+	"html/template"
+	"io"
+	"path/filepath"
+
+	"github.com/labstack/echo"
+	"{{.project_path}}/{{.project_name}}/views"
+)
+
+type Templates struct {
+	templates *template.Template
+}
+
+var templates *Templates
+
+func init() {
+	// Compiling templates from go-bindata
+	filenames := views.AssetNames()
+	var t *template.Template
+	if len(filenames) == 0 {
+		panic(errors.New("template: no files views folder nor go generate not called"))
+	}
+	for _, filename := range filenames {
+		b, err := views.Asset(filename)
+		if err != nil {
+			panic(err)
+		}
+
+		s := string(b)
+		name := filepath.Base(filename)
+
+		var tmpl *template.Template
+		if t == nil {
+			// First template
+			t = template.New(name)
+		}
+		if name == t.Name() {
+			tmpl = t
+		} else {
+			tmpl = t.New(name)
+		}
+
+		if _, err = tmpl.Parse(s); err != nil {
+			panic(err)
+		}
+	}
+
+	templates = &Templates{
+		templates: t,
+	}
+}
+
+func (t *Templates) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
+	var buf bytes.Buffer
+	if err := t.templates.ExecuteTemplate(&buf, name, data); err != nil {
+		return err
+	}
+
+	return t.templates.ExecuteTemplate(w, "layout.tmpl", echo.Map{
+		"yield": template.HTML(buf.String()),
+		"title": "{{.project_name}}",
+	})
+}

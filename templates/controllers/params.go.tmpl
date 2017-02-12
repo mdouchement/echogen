@@ -1,0 +1,53 @@
+package controllers
+
+import (
+	"{{.project_path}}/{{.project_name}}/errors"
+	"{{.project_path}}/{{.project_name}}/utils"
+	govalidator "gopkg.in/asaskevich/govalidator.v5"
+)
+
+type (
+	ParamsValidator struct{}
+	// A ParamsField can store details of a field from HTTP params.
+	ParamsField map[string]interface{}
+	resource    interface {
+		Name() string
+	}
+)
+
+func (pv *ParamsValidator) Validate(i interface{}) error {
+	if ok, err := govalidator.ValidateStruct(i); !ok {
+		name := "unknown"
+		if r, ok := i.(resource); ok {
+			name = r.Name()
+		}
+		return errors.NewControllersError("params_binding", errors.M{
+			"resource": name,
+			"fields":   paramsErrorsFormatter(err),
+		})
+	}
+
+	return nil
+}
+
+func paramsErrorsFormatter(err error) []ParamsField {
+	currentFields := make([]ParamsField, 0)
+
+	switch v := err.(type) {
+	case govalidator.Errors:
+		// Get nested fields errors
+		for _, err2 := range v {
+			// There is only one error until no embedded fields
+			fields := paramsErrorsFormatter(err2)
+			currentFields = append(currentFields, fields...)
+		}
+	case govalidator.Error:
+		return []ParamsField{ {
+			"parameter": utils.ToSnake(v.Name),
+			"type":      v.Err.Error(),
+		}}
+
+	}
+
+	return currentFields
+}

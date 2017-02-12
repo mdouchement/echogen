@@ -1,0 +1,47 @@
+package controllers
+
+import (
+	"net/http"
+
+	"github.com/labstack/echo"
+)
+
+type (
+	Users      struct{} // Could be []*models.User
+	userParams struct {
+		ResourceName string `json:"-"` // Used for error formating
+		Email        string `json:"email" valid:"required~required"`
+		Password     string `json:"password" valid:"required~required"`
+		NickName     string `json:"nick_name" valid:"required~required"`
+		Age          int    `json:"age"`
+	}
+)
+
+func (up *userParams) Name() string {
+	return up.ResourceName
+}
+
+func NewUsers() *Users {
+	return &Users{}
+}
+
+func (u *Users) Create(c echo.Context) error {
+	c.Set("handler_method", "Create")
+
+	var params userParams
+	if err := c.Bind(&params); err != nil {
+		return err
+	}
+	params.ResourceName = "user" // Needed for validation
+
+	if err := c.Validate(&params); err != nil {
+		return err
+	}
+
+	// Insert in database for example
+	user := map[string]string{
+		"nick_name": "mdouchement",
+	}
+
+	return c.JSON(http.StatusCreated, user)
+}
