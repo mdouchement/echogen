@@ -13,8 +13,8 @@
 // templates/glide.yaml.tmpl
 // templates/main.go.tmpl
 // templates/models/.keep.tmpl
-// templates/public/assets/javascripts/.keep.tmpl
-// templates/public/assets/stylesheets/.keep.tmpl
+// templates/public/assets/javascripts/app.js.tmpl
+// templates/public/assets/stylesheets/app.css.tmpl
 // templates/utils/conversions.go.tmpl
 // templates/utils/strings.go.tmpl
 // templates/views/bindata.go.tmpl
@@ -108,7 +108,7 @@ func templatesMakefileTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/Makefile.tmpl", size: 580, mode: os.FileMode(420), modTime: time.Unix(1486895677, 0)}
+	info := bindataFileInfo{name: "templates/Makefile.tmpl", size: 580, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -128,7 +128,7 @@ func templatesConfigConfigGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/config/config.go.tmpl", size: 969, mode: os.FileMode(420), modTime: time.Unix(1486758054, 0)}
+	info := bindataFileInfo{name: "templates/config/config.go.tmpl", size: 969, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -148,7 +148,7 @@ func templatesConfigLoggerGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/config/logger.go.tmpl", size: 268, mode: os.FileMode(420), modTime: time.Unix(1486757915, 0)}
+	info := bindataFileInfo{name: "templates/config/logger.go.tmpl", size: 268, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -168,7 +168,7 @@ func templatesConfigModeGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/config/mode.go.tmpl", size: 802, mode: os.FileMode(420), modTime: time.Unix(1486757948, 0)}
+	info := bindataFileInfo{name: "templates/config/mode.go.tmpl", size: 802, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -188,7 +188,7 @@ func templatesControllersHomeGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/controllers/home.go.tmpl", size: 261, mode: os.FileMode(420), modTime: time.Unix(1486759914, 0)}
+	info := bindataFileInfo{name: "templates/controllers/home.go.tmpl", size: 261, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -208,7 +208,7 @@ func templatesControllersParamsGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/controllers/params.go.tmpl", size: 1206, mode: os.FileMode(420), modTime: time.Unix(1486765123, 0)}
+	info := bindataFileInfo{name: "templates/controllers/params.go.tmpl", size: 1206, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -228,7 +228,7 @@ func templatesControllersUserExampleGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/controllers/user.example.go.tmpl", size: 979, mode: os.FileMode(420), modTime: time.Unix(1486767925, 0)}
+	info := bindataFileInfo{name: "templates/controllers/user.example.go.tmpl", size: 979, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -248,7 +248,7 @@ func templatesControllersVersionGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/controllers/version.go.tmpl", size: 333, mode: os.FileMode(420), modTime: time.Unix(1486758035, 0)}
+	info := bindataFileInfo{name: "templates/controllers/version.go.tmpl", size: 333, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -268,7 +268,7 @@ func templatesErrorsControllersGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/errors/controllers.go.tmpl", size: 465, mode: os.FileMode(420), modTime: time.Unix(1486765117, 0)}
+	info := bindataFileInfo{name: "templates/errors/controllers.go.tmpl", size: 465, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -288,7 +288,7 @@ func templatesErrorsErrorGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/errors/error.go.tmpl", size: 2292, mode: os.FileMode(420), modTime: time.Unix(1486760614, 0)}
+	info := bindataFileInfo{name: "templates/errors/error.go.tmpl", size: 2292, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -308,7 +308,7 @@ func templatesGlideYamlTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/glide.yaml.tmpl", size: 1605, mode: os.FileMode(420), modTime: time.Unix(1486767414, 0)}
+	info := bindataFileInfo{name: "templates/glide.yaml.tmpl", size: 1605, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -328,7 +328,7 @@ func templatesMainGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/main.go.tmpl", size: 586, mode: os.FileMode(420), modTime: time.Unix(1486895496, 0)}
+	info := bindataFileInfo{name: "templates/main.go.tmpl", size: 586, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -348,47 +348,47 @@ func templatesModelsKeepTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/models/.keep.tmpl", size: 0, mode: os.FileMode(420), modTime: time.Unix(1486760902, 0)}
+	info := bindataFileInfo{name: "templates/models/.keep.tmpl", size: 0, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
-var _templatesPublicAssetsJavascriptsKeepTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x01\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00")
+var _templatesPublicAssetsJavascriptsAppJsTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x01\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00")
 
-func templatesPublicAssetsJavascriptsKeepTmplBytes() ([]byte, error) {
+func templatesPublicAssetsJavascriptsAppJsTmplBytes() ([]byte, error) {
 	return bindataRead(
-		_templatesPublicAssetsJavascriptsKeepTmpl,
-		"templates/public/assets/javascripts/.keep.tmpl",
+		_templatesPublicAssetsJavascriptsAppJsTmpl,
+		"templates/public/assets/javascripts/app.js.tmpl",
 	)
 }
 
-func templatesPublicAssetsJavascriptsKeepTmpl() (*asset, error) {
-	bytes, err := templatesPublicAssetsJavascriptsKeepTmplBytes()
+func templatesPublicAssetsJavascriptsAppJsTmpl() (*asset, error) {
+	bytes, err := templatesPublicAssetsJavascriptsAppJsTmplBytes()
 	if err != nil {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/public/assets/javascripts/.keep.tmpl", size: 0, mode: os.FileMode(420), modTime: time.Unix(1486759764, 0)}
+	info := bindataFileInfo{name: "templates/public/assets/javascripts/app.js.tmpl", size: 0, mode: os.FileMode(420), modTime: time.Unix(1487674931, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
-var _templatesPublicAssetsStylesheetsKeepTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x01\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00")
+var _templatesPublicAssetsStylesheetsAppCssTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x01\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00")
 
-func templatesPublicAssetsStylesheetsKeepTmplBytes() ([]byte, error) {
+func templatesPublicAssetsStylesheetsAppCssTmplBytes() ([]byte, error) {
 	return bindataRead(
-		_templatesPublicAssetsStylesheetsKeepTmpl,
-		"templates/public/assets/stylesheets/.keep.tmpl",
+		_templatesPublicAssetsStylesheetsAppCssTmpl,
+		"templates/public/assets/stylesheets/app.css.tmpl",
 	)
 }
 
-func templatesPublicAssetsStylesheetsKeepTmpl() (*asset, error) {
-	bytes, err := templatesPublicAssetsStylesheetsKeepTmplBytes()
+func templatesPublicAssetsStylesheetsAppCssTmpl() (*asset, error) {
+	bytes, err := templatesPublicAssetsStylesheetsAppCssTmplBytes()
 	if err != nil {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/public/assets/stylesheets/.keep.tmpl", size: 0, mode: os.FileMode(420), modTime: time.Unix(1486759741, 0)}
+	info := bindataFileInfo{name: "templates/public/assets/stylesheets/app.css.tmpl", size: 0, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -408,7 +408,7 @@ func templatesUtilsConversionsGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/utils/conversions.go.tmpl", size: 831, mode: os.FileMode(420), modTime: time.Unix(1486761051, 0)}
+	info := bindataFileInfo{name: "templates/utils/conversions.go.tmpl", size: 831, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -428,7 +428,7 @@ func templatesUtilsStringsGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/utils/strings.go.tmpl", size: 539, mode: os.FileMode(420), modTime: time.Unix(1486761090, 0)}
+	info := bindataFileInfo{name: "templates/utils/strings.go.tmpl", size: 539, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -448,7 +448,7 @@ func templatesViewsBindataGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/views/bindata.go.tmpl", size: 7443, mode: os.FileMode(420), modTime: time.Unix(1486895717, 0)}
+	info := bindataFileInfo{name: "templates/views/bindata.go.tmpl", size: 7443, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -468,12 +468,12 @@ func templatesViewsIndexHomeTmplTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/views/index.home.tmpl.tmpl", size: 45, mode: os.FileMode(420), modTime: time.Unix(1486760167, 0)}
+	info := bindataFileInfo{name: "templates/views/index.home.tmpl.tmpl", size: 45, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
-var _templatesViewsLayoutTmplTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x4c\x90\xbd\x52\xc3\x30\x10\x84\xfb\x3c\xc5\x45\x75\x14\x41\x2f\xb9\x01\x6a\x52\xd0\x50\x5e\xac\x23\xbe\x19\xfd\x30\xce\xc5\x21\xe3\xf1\xbb\x33\xb6\x2c\x43\xa5\xfd\x76\x4e\xda\xd5\xd9\xfd\xeb\xfb\xcb\xc7\xe7\xe9\x0d\x3a\x89\xa1\xd9\xd9\xf9\x80\x80\xe9\xe2\x14\x25\xd5\xec\x00\x6c\x47\xe8\x67\x01\x60\x23\x09\x42\xc2\x48\x4e\x0d\x4c\xf7\xef\xdc\x8b\x82\x36\x27\xa1\x24\x4e\xdd\xd9\x4b\xe7\x3c\x0d\xdc\x92\x5e\xe0\x00\x9c\x58\x18\x83\xbe\xb6\x18\xc8\x3d\x1f\x9f\x0e\x10\xf1\x87\xe3\x2d\xfe\xb7\x6e\x57\xea\x17\xc6\x73\x20\x97\xb2\x02\xb3\x26\x0a\x4b\xa0\x66\x1c\x8f\x8b\x98\x26\x6b\x8a\x33\x17\x33\xa5\xd9\x2c\x3d\x0f\xeb\x85\x73\xf6\x8f\x22\xd7\xea\xd4\x6f\x68\x2a\x57\x63\xaf\x35\x9c\xf0\x42\xf5\x0f\xa0\xf5\x36\x1c\x91\x53\x05\x80\x71\x3c\x3e\x98\x82\x9f\xa6\xed\xb1\x32\x50\x52\x4d\x89\x2d\xf0\x95\xb3\xd4\x54\x6b\xfe\xc8\x9a\xa5\xa6\x35\x65\xd7\xbf\x01\x00\x00\xff\xff\x8c\x4c\x7a\x46\x7c\x01\x00\x00")
+var _templatesViewsLayoutTmplTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x84\x92\x31\x93\xda\x30\x10\x85\x7b\x7e\xc5\xa2\x1a\x5b\x49\x2f\x39\x45\x92\x3a\x14\x69\x52\x65\x16\x79\x41\x02\x49\xf6\x78\x65\x03\xe3\xf1\x7f\xbf\xc1\xb2\x81\x99\x2b\xae\xf2\x7b\xbb\x6b\x3d\xed\x37\x52\xdb\x5f\x7f\x7e\xfe\xfd\xb7\xff\x0d\x36\x05\x5f\x6d\xd4\xe3\x03\x1e\xe3\x49\x0b\x8a\xa2\xda\x00\x28\x4b\x58\x3f\x04\x80\x0a\x94\x10\x22\x06\xd2\x62\x70\x74\x6d\x9b\x2e\x09\x30\x4d\x4c\x14\x93\x16\x57\x57\x27\xab\x6b\x1a\x9c\xa1\x62\x36\x3b\x70\xd1\x25\x87\xbe\x60\x83\x9e\xf4\xf7\xf2\xdb\x0e\x02\xde\x5c\xe8\xc3\x7b\xa9\x67\xea\x66\x8f\x07\x4f\x3a\x36\x02\xe4\x92\x98\x5c\xf2\x54\x8d\x63\x39\x8b\x69\x52\x32\x57\x72\xd7\xbb\x78\x81\x8e\xbc\x16\x9c\xee\x9e\xd8\x12\x25\x01\xb6\xa3\xa3\x16\xb2\xed\x0f\xde\x19\x89\xcc\x94\x58\xbe\x06\x58\x62\xdb\x96\x86\xf9\x87\x45\xb6\x7a\x1c\x5d\xac\xe9\x06\xa5\xb1\x64\x2e\xdc\x07\x06\x81\x6d\xfb\xdf\x30\x8b\x69\x5a\x6e\xa2\x64\xa6\xf0\x90\xb5\x1b\x96\xf8\x43\x53\xdf\xb3\x5c\x30\x51\xf7\xb4\x72\xf5\x6b\x61\x5b\x14\xb0\xc7\x13\xad\xbc\xa0\x28\x9e\xc3\x01\x5d\x5c\x0d\xc0\x38\x96\x77\x47\xbe\x9e\xa6\xe7\x61\x79\x20\xa7\xca\x1c\x9b\xcd\xb1\x69\xd2\x5b\x2a\x9b\xce\xb5\x09\xb8\x33\x9f\x00\x9c\x71\xc0\xdc\xce\x00\xce\x5f\xec\x7f\x9e\xd7\xaf\x94\xcc\x3f\x2d\x2b\xcb\x57\xa0\x92\x33\x09\x25\xf3\xd3\xf9\x08\x00\x00\xff\xff\xa3\x12\x4a\x63\x4b\x02\x00\x00")
 
 func templatesViewsLayoutTmplTmplBytes() ([]byte, error) {
 	return bindataRead(
@@ -488,7 +488,7 @@ func templatesViewsLayoutTmplTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/views/layout.tmpl.tmpl", size: 380, mode: os.FileMode(420), modTime: time.Unix(1486760068, 0)}
+	info := bindataFileInfo{name: "templates/views/layout.tmpl.tmpl", size: 587, mode: os.FileMode(420), modTime: time.Unix(1487674918, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -508,7 +508,7 @@ func templatesWebAssetsGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/web/assets.go.tmpl", size: 6819, mode: os.FileMode(420), modTime: time.Unix(1486765984, 0)}
+	info := bindataFileInfo{name: "templates/web/assets.go.tmpl", size: 6819, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -528,7 +528,7 @@ func templatesWebMiddlewaresEchorusGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/web/middlewares/echorus.go.tmpl", size: 2588, mode: os.FileMode(420), modTime: time.Unix(1486760241, 0)}
+	info := bindataFileInfo{name: "templates/web/middlewares/echorus.go.tmpl", size: 2588, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -548,7 +548,7 @@ func templatesWebMiddlewaresHttp_error_handlerGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/web/middlewares/http_error_handler.go.tmpl", size: 645, mode: os.FileMode(420), modTime: time.Unix(1486760411, 0)}
+	info := bindataFileInfo{name: "templates/web/middlewares/http_error_handler.go.tmpl", size: 645, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -568,7 +568,7 @@ func templatesWebMiddlewaresRestGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/web/middlewares/rest.go.tmpl", size: 1332, mode: os.FileMode(420), modTime: time.Unix(1486760290, 0)}
+	info := bindataFileInfo{name: "templates/web/middlewares/rest.go.tmpl", size: 1332, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -588,12 +588,12 @@ func templatesWebServerGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/web/server.go.tmpl", size: 2157, mode: os.FileMode(420), modTime: time.Unix(1486768144, 0)}
+	info := bindataFileInfo{name: "templates/web/server.go.tmpl", size: 2157, mode: os.FileMode(420), modTime: time.Unix(1487674795, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
-var _templatesWebTemplateGoTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x84\x54\x41\x6f\x9c\x3c\x10\x3d\xdb\xbf\x62\x3e\x1f\x22\xf8\x44\xa1\xe7\xad\x38\x34\x51\xab\x1e\x9a\xa8\x6a\x23\xf5\x18\x19\x76\x60\xdd\x18\x1b\xd9\x43\x36\xab\x15\xff\xbd\x1a\x58\xd8\x6d\x12\xb5\x97\x95\x19\x9e\xdf\x7b\xf3\x66\xd8\x5e\xd7\x8f\xba\x45\xd8\x63\x25\xa5\xe9\x7a\x1f\x08\x12\x29\x54\x75\x20\x8c\x4a\x0a\x85\x21\xf8\x30\x9d\x76\xd4\xd9\x82\xb0\xeb\xad\x26\xe4\x82\xf1\xfc\xdb\x6b\xda\x15\x8d\xb1\xc8\x07\x25\xa5\x50\xad\xa1\xdd\x50\xe5\xb5\xef\x0a\xab\xab\x48\xba\x7e\x2c\xb0\xde\x4d\xe8\xe3\x31\xef\x83\xff\x85\x35\x3d\x30\x7e\x1c\x8b\x8b\x8a\xd3\x1d\x8e\x63\xf1\x64\x70\x1f\x95\x4c\xa5\xa4\x43\x8f\x70\x7f\x92\x8c\x10\x29\x0c\x35\xc1\x51\x0a\x5a\x6b\xff\x2f\xc7\x7c\xc1\xc9\x51\xca\x27\x1d\xe0\x02\xb3\x52\x48\xd9\x0c\xae\x06\xe3\x0c\x25\x29\x13\x15\x05\xdc\xf8\xae\x37\xd6\xb8\xf6\xe2\x46\x13\x7c\x07\xad\x7f\x57\x19\xb7\xd5\xa4\xa5\xe0\x06\xd9\x5e\x84\x4d\x09\x93\xc1\xfc\x63\x8c\x48\x77\x5c\x4b\x52\x29\x26\xc5\xb7\xdc\x08\xd3\x80\x45\x97\xac\x0c\x29\x94\x25\xbc\x67\x71\xd1\x6b\x67\xea\x64\x8e\x38\xbf\xc3\x7d\xa2\x96\xfb\x1b\x70\x1e\xf8\x4a\x9c\xd5\xa0\xf1\x76\x8b\x01\x9c\x0f\xd0\x7a\x68\xd1\x61\xd0\x84\xe0\x3c\x41\xad\xad\xc5\xad\x4a\x53\x29\x46\x29\x1a\x1f\xe0\x21\x83\x45\x8e\xfd\x06\xed\x5a\x84\x73\x0b\x2c\x5d\x65\x80\x21\xbc\xe8\x66\x35\x99\x4a\xc1\xbe\x19\xf1\x5f\x09\xce\xd8\xe9\xce\xd9\x2f\xbf\x1f\xa5\x14\x62\xca\x23\x52\x30\xae\x4d\x2a\xae\x2e\x9a\xcb\x46\xe4\xd7\x3a\xe2\x05\xaf\x14\x73\x54\x5d\x6f\xdf\x4c\x8b\x65\x89\x13\x5a\x45\x8b\x02\x3e\x9b\x10\x69\x1d\x0f\x17\x09\xca\xf5\x79\x4a\x6e\x71\x3d\xce\x14\x93\x8d\xb2\x04\xca\x79\x42\xf3\xac\x85\x98\x54\x4b\x20\xc6\x01\xda\x88\x7f\x96\x5f\x10\xcd\x4c\x0f\x73\x50\xe5\x64\x39\xff\xa6\x43\xc4\x24\xa6\x1f\xfe\x95\xcd\x74\xff\xbc\x50\x25\x5c\xad\x4b\xc8\xf0\xf5\xcd\x06\x28\x63\xf0\x78\x5a\xcd\x84\x2e\xd6\x35\x85\xef\xe8\xb6\x18\x92\x3d\x18\x9f\xff\x0c\x86\x30\x64\x73\x6f\x73\xe6\x19\xf0\x7a\x82\x71\x84\xa1\xd1\x35\x1e\xc7\x0c\x6a\xe0\x8f\x2d\xbf\xf1\x8e\xf0\x99\x52\x98\xd6\x8b\x3d\x72\xee\xd5\xd0\xc0\xf4\x6d\xe7\xd7\x43\xd3\x60\x90\xcb\x98\x37\xdc\xff\xea\x2a\xff\xf4\x8c\xf5\x40\xb8\x38\x49\xae\xaa\xa1\x99\x95\x67\xc9\xd7\x01\x04\xa4\x21\x38\xae\xce\xbd\x9f\x9e\xff\x46\xba\xcf\x40\x59\x7d\xf0\x03\xe5\x1c\xae\xca\x66\xe7\xb7\xba\x67\x42\x75\x30\x68\xb7\x6a\x73\x9e\xf3\x97\xfb\xdb\xaf\x49\x35\x34\xf9\x8f\x79\xe1\xd2\x34\x63\x1c\x19\xb2\xa8\x36\xa0\x5e\xfd\x95\x28\x8e\x36\x95\xa3\xfc\x1d\x00\x00\xff\xff\x27\xec\x3f\x07\xe7\x04\x00\x00")
+var _templatesWebTemplateGoTmpl = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x94\x54\x4d\x8f\xdb\x36\x10\x3d\x8b\xbf\x62\xca\x43\x20\x15\x8a\xd8\x5e\x5d\xa8\x40\x13\xf4\x0b\x68\x82\x22\xdd\xa2\x87\x20\x30\x28\x79\x64\x73\x57\x22\x09\x72\xb4\xde\xc5\x42\xff\xbd\x18\xd2\x96\xbd\xc9\xb6\x45\x2f\x86\x3c\x9c\x99\xf7\xf8\xe6\x71\xbc\xee\xef\xf4\x1e\xe1\x88\x9d\x10\x66\xf2\x2e\x10\x94\xa2\x90\xdd\x23\x61\x94\xa2\x90\x18\x82\x0b\xe9\xeb\x40\xd3\xa8\x08\x27\x3f\x6a\x42\x0e\x18\xc7\xbf\x5e\xd3\x41\x0d\x66\x44\xfe\xe0\x40\xa4\x60\xec\x3e\x4a\x21\x0a\xb9\x37\x74\x98\xbb\xa6\x77\x93\x1a\x75\x17\x49\xf7\x77\x0a\xfb\x43\x2a\x7c\x7a\x6a\x7c\x70\xb7\xd8\xd3\x96\x4b\x97\x45\x5d\x45\xac\x9e\x70\x59\xd4\xbd\xc1\x63\x94\xa2\x12\x82\x1e\x3d\xc2\xcd\x09\x3d\x42\xa4\x30\xf7\x04\x4f\xa2\xa0\x35\xf6\xf5\xf9\xb3\x39\xe7\x89\x45\x88\x7b\x1d\xf8\x46\x57\x69\x6b\x17\x51\xf4\x07\xec\xef\xe2\x3c\x45\x98\xb4\xff\x98\x99\x7f\x32\x96\x30\x0c\xba\xc7\xa7\x85\x91\x87\xd9\xf6\x60\xac\xa1\xb2\x62\x3c\xa5\xe0\xad\x9b\xbc\x19\x8d\xdd\xc3\xa5\xeb\x10\xdc\x04\x7b\xf7\xba\x33\x76\xa7\x49\x8b\x82\x25\xe1\x5b\x44\xd8\xb4\x90\xee\xd1\xfc\x10\x23\xd2\x7b\x8e\x95\x95\x28\x98\x18\xbd\x44\xba\x30\x03\x8c\x68\xcb\xb5\x43\x05\x6d\x0b\xdf\x30\x78\xe1\xb5\x35\x7d\x99\x87\xd2\xbc\xc7\x63\x29\xcf\xf5\x1b\xb0\x0e\xb8\x24\x66\x34\x18\xdc\xb8\xc3\x00\xd6\x05\xd8\x3b\xd8\xa3\xc5\xa0\x09\xc1\x3a\x82\x5e\x8f\x23\xee\x64\x55\x89\x62\x11\xc5\xe0\x02\x6c\x6b\x38\xc3\x31\xdf\xa0\xed\x1e\xe1\x72\x05\x86\xee\x6a\xc0\x10\x3e\xbb\xcd\x4a\xb2\x12\x05\xf3\xe6\x8c\xaf\x5a\xb0\x66\x4c\x35\x17\xbe\x7c\xbe\x08\x51\x14\x49\x8f\xac\x74\xd9\x71\xf4\x8c\x79\xf6\x50\xf3\x46\x47\xbc\xea\x2b\x8a\x2c\xd5\xe4\xc7\x17\xd5\x62\x58\x62\x85\x56\x50\xa5\xe0\x27\x13\x22\xad\xe3\xe1\x20\x41\xbb\xfe\x4f\xca\x9d\x59\x2f\xb9\x45\xa2\xd1\xb6\x40\x0d\x4f\x28\xcf\xba\x28\x12\x6a\x0b\xc4\x79\x80\x63\xc4\xe7\xe1\xcf\x1a\xe5\x4e\xdb\x2c\x54\x9b\x28\x37\xbf\xeb\x10\xb1\x8c\xd5\x77\xff\xa5\x4d\xaa\xbf\x18\xaa\x85\x57\xab\x51\x39\x7d\x3d\xd9\x00\xd5\x39\x59\x29\xf8\x39\x8f\x95\xbd\xa8\x79\x1e\xb0\x3a\x5a\x14\x29\x90\xe4\x7e\x6e\xbc\x8b\xe9\x5b\x98\xf4\x1d\x96\x2f\x7b\xbf\x4e\x26\xcc\x4d\xd8\x29\xff\x68\x93\x13\x0e\x93\x34\x76\x70\xab\x4d\x12\xea\xaf\x76\x70\xff\xdf\x24\x4a\x81\xf2\x73\x37\x9a\x5e\xe5\xee\xea\x56\xdf\xeb\xd8\x07\xe3\x29\x2a\xed\x7d\x73\x1b\xa1\xfd\x1e\xb4\xf7\xdb\xdb\x78\x65\xa2\xd3\xf2\x69\x3e\xa0\x1f\x75\x9f\x6d\x74\x31\x15\xd3\x3b\x8d\xb7\xaa\x41\x36\xb2\x06\xb9\x95\x35\xbc\xfe\x96\x91\x57\x5d\x3e\x72\xb7\x4f\xd0\x42\xca\x7f\xe7\x76\x37\x86\x4b\x9a\x3f\xad\x79\x28\xd3\x9b\x59\x4e\x6b\xa1\xa4\xab\x75\x52\xc1\x07\xb4\x3b\x0c\xe5\x11\x8c\x6b\xfe\x0a\x86\x30\xd4\xd9\x57\x99\x56\x0d\xbc\x1a\xe0\x99\xc6\x3d\xf0\x3e\x6c\xde\x3a\x4b\xf8\x40\x15\xa4\xa7\xcd\xb2\xb0\xe7\xbb\x79\x80\xb4\x89\x9b\x37\xf3\x30\x60\x10\x67\xf5\x36\xec\xbd\xd5\x11\xcd\x8f\x0f\xd8\xcf\x84\x67\x26\xe5\xab\x6e\x1e\x32\x72\x86\xfc\xd2\x7c\x01\x69\x0e\x96\xa3\xd9\x4a\xa7\xff\xff\xd6\xf4\x58\x83\x1c\xf5\xa3\x9b\xa9\x61\x63\xcb\x3a\x33\x7f\xa7\x3d\x37\x94\x8f\x06\xc7\x9d\xdc\x5c\xde\xd8\x2f\x37\xef\x7e\x2b\xbb\x79\x68\xfe\xc8\x8f\xbd\xaa\x6a\xce\x23\x43\x23\xca\x0d\xc8\x2f\xb6\xbd\x4c\xe7\xeb\x14\xe4\xe6\x62\x66\x36\x7c\x25\x16\xf1\x77\x00\x00\x00\xff\xff\xb1\xe3\x99\x56\xaf\x06\x00\x00")
 
 func templatesWebTemplateGoTmplBytes() ([]byte, error) {
 	return bindataRead(
@@ -608,7 +608,7 @@ func templatesWebTemplateGoTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "templates/web/template.go.tmpl", size: 1255, mode: os.FileMode(420), modTime: time.Unix(1486897429, 0)}
+	info := bindataFileInfo{name: "templates/web/template.go.tmpl", size: 1711, mode: os.FileMode(420), modTime: time.Unix(1487675278, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -678,8 +678,8 @@ var _bindata = map[string]func() (*asset, error){
 	"templates/glide.yaml.tmpl": templatesGlideYamlTmpl,
 	"templates/main.go.tmpl": templatesMainGoTmpl,
 	"templates/models/.keep.tmpl": templatesModelsKeepTmpl,
-	"templates/public/assets/javascripts/.keep.tmpl": templatesPublicAssetsJavascriptsKeepTmpl,
-	"templates/public/assets/stylesheets/.keep.tmpl": templatesPublicAssetsStylesheetsKeepTmpl,
+	"templates/public/assets/javascripts/app.js.tmpl": templatesPublicAssetsJavascriptsAppJsTmpl,
+	"templates/public/assets/stylesheets/app.css.tmpl": templatesPublicAssetsStylesheetsAppCssTmpl,
 	"templates/utils/conversions.go.tmpl": templatesUtilsConversionsGoTmpl,
 	"templates/utils/strings.go.tmpl": templatesUtilsStringsGoTmpl,
 	"templates/views/bindata.go.tmpl": templatesViewsBindataGoTmpl,
@@ -758,10 +758,10 @@ var _bintree = &bintree{nil, map[string]*bintree{
 		"public": &bintree{nil, map[string]*bintree{
 			"assets": &bintree{nil, map[string]*bintree{
 				"javascripts": &bintree{nil, map[string]*bintree{
-					".keep.tmpl": &bintree{templatesPublicAssetsJavascriptsKeepTmpl, map[string]*bintree{}},
+					"app.js.tmpl": &bintree{templatesPublicAssetsJavascriptsAppJsTmpl, map[string]*bintree{}},
 				}},
 				"stylesheets": &bintree{nil, map[string]*bintree{
-					".keep.tmpl": &bintree{templatesPublicAssetsStylesheetsKeepTmpl, map[string]*bintree{}},
+					"app.css.tmpl": &bintree{templatesPublicAssetsStylesheetsAppCssTmpl, map[string]*bintree{}},
 				}},
 			}},
 		}},

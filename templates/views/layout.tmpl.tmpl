@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>{{.title}}</title>
+    <link rel="stylesheet" href="/public/assets/stylesheets/app.css?hash={{index .checksums "app_css"}}" />
   </head>
 
   <div>
@@ -18,6 +19,7 @@
     </body>
 
     <footer>
+      <script src="/public/assets/javascripts/app.js?hash={{index .checksums "app_js"}}"></script>
     </footer>
   </div>
 </html>

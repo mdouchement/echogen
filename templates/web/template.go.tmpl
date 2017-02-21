@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"io"
 	"path/filepath"
+	"strings"
 
 	"github.com/labstack/echo"
 	"{{.project_path}}/{{.project_name}}/views"
@@ -15,7 +16,10 @@ type Templates struct {
 	templates *template.Template
 }
 
-var templates *Templates
+var (
+	templates *Templates
+	checksums map[string]interface{}
+)
 
 func init() {
 	// Compiling templates from go-bindata
@@ -52,6 +56,20 @@ func init() {
 	templates = &Templates{
 		templates: t,
 	}
+
+	// Generating asset checksums
+	assets := AssetNames()
+	checksums = make(map[string]interface{}, len(assets))
+	for _, filename := range assets {
+		info, err := AssetInfo(filename)
+		if err != nil {
+			panic(err)
+		}
+
+		// /public/assets/javascripts/app.js => app_js
+		name := strings.Replace(filepath.Base(info.Name()), ".", "_", -1)
+		checksums[name] = info.ModTime().Unix()
+	}
 }
 
 func (t *Templates) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
@@ -63,5 +81,6 @@ func (t *Templates) Render(w io.Writer, name string, data interface{}, c echo.Co
 	return t.templates.ExecuteTemplate(w, "layout.tmpl", echo.Map{
 		"yield": template.HTML(buf.String()),
 		"title": "{{.project_name}}",
+		"checksums": checksums,
 	})
 }
